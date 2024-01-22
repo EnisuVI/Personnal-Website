@@ -28,6 +28,10 @@ body {
     justify-content: center;
 }
 
+.logo path {
+    fill: var(--color-night) !important;
+}
+
 .btn {
     color: var(--color-night);
     border: none;
@@ -59,4 +63,8 @@ body {
     height: 50%;
     object-fit: cover;
     justify-content: center;
+  }
+
+  .swiper-wrapper {
+    padding-top: 5%;
   }
