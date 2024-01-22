@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="public/css/styleNight.css">
     <link rel="stylesheet" href="public/css/styleDay.css">
     <link rel="stylesheet" href="public/css/cst.css">
+    <link rel="stylesheet" href="public/css/swiper-bundle.min.css" />
 
     <script src="https://kit.fontawesome.com/c7761a98fd.js" crossorigin="anonymous"></script>
 
@@ -27,8 +28,45 @@
             <div class="btn" id="btn"><i class="fa-solid fa-moon"></i></div>
         </ul>
     </nav>
+
     <div class="accueil" id="accueil"></div>
     
     <div class="contact" id="contact"></div>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="public/img/Church.jpg"></img></div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+    });
+  </script>
 </body>
 </html>

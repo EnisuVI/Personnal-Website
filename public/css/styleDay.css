@@ -37,3 +37,26 @@ body {
     font-size: 15px;
     font-weight: 200;
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--background-color-day);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    justify-content: center;
+  }

@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     console.log('ready');
 
+    // Changement de theme
     let btn = $('.btn');
 
     if (localStorage.getItem('theme') == 'night') {
@@ -27,4 +28,6 @@ $(document).ready(function() {
 
     });
 
+
 })
+
