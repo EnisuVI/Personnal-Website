@@ -119,3 +119,28 @@ body {
     height: 1000px;
     padding: 10px;
   }
+
+  .photoProfil {
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+    float: left;
+  }
+
+  .biographie {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    justify-content: center;
+    padding-right: 2%;
+  }
+
+  .build {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    justify-content: center;
+    padding-right: 2%;
+  }
