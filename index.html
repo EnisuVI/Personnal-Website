@@ -112,7 +112,7 @@ l46 20 -30 44 c-56 80 -151 85 -416 21z"/>
 </svg>
 
         </li>
-            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="galerie.html">Galerie</a></li>
             <li><a href="biographie.html">Biographie</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -128,14 +128,14 @@ l46 20 -30 44 c-56 80 -151 85 -416 21z"/>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="public/img/Church.jpg"></img></div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide"><img src="public/img/230 CE - Sans Logo.jpg"></img></div>
+      <div class="swiper-slide"><img src="public/img/Animaux Fouquiérois (1).jpg"></img></div>
+      <div class="swiper-slide"><img src="public/img/Animaux Fouquiérois (4).jpg"></img></div>
+      <div class="swiper-slide"><img src="public/img/Bear - Sans Logo.jpg"></img></div>
+      <div class="swiper-slide"><img src="public/img/The Sea - Sans Logo.jpg"></img></div>
+      <div class="swiper-slide"><img src="public/img/Wandering around the Town (10) - Sans Logo.jpg"></img></div>
+      <div class="swiper-slide"><img src="public/img/Moos (4).jpg"></img></div>
+      <div class="swiper-slide"><img src="public/img/Moos (5).jpg"></img></div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -156,7 +156,16 @@ l46 20 -30 44 c-56 80 -151 85 -416 21z"/>
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
       loop: true,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+  },
     });
   </script>
 </body>
