@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-day);
+    font-family: indivisible, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+}
+
+body {
+    background-color: var(--background-color-day);
+}
+
+.menu li, .btn{
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 25px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: var(--color-day);
+}
+
+.menu {
+    text-align: center;
+    justify-content: center;
+}
+
+.btn {
+    color: var(--color-day);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 200;
+}
