@@ -27,6 +27,7 @@ $(document).ready(function() {
         }
 
     });
+    
 
     var $grid = $('#galerie').masonry({
         itemSelector: '.grid-item',
