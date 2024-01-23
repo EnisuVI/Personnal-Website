@@ -206,7 +206,7 @@ body {
 .modal {
   display: none; /* La modale est initialement cachée */
   position: fixed; /* Position fixe pour la modale */
-  z-index: 1; /* La modale sera au-dessus de tout le reste */
+  z-index: 1004; /* La modale sera au-dessus de tout le reste */
   padding-top: 100px; /* Position de la modale */
   left: 0;
   top: 0;
