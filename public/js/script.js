@@ -107,5 +107,12 @@ modal.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+var button = document.getElementById('open-selectors');
+var menu = document.querySelector('.selecteurs');
 
+button.addEventListener('click', function() {
+  menu.classList.toggle('open');
+  button.classList.toggle('close'); /* Ajoute ou supprime la classe close */
+});
+  
 })

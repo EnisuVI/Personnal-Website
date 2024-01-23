@@ -245,10 +245,54 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; 
+  z-index: 1003; 
 }
 
 .selecteurs {
+  position: fixed;
+  margin-top: 6.75%;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  overflow: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1002; /* Augmente la valeur de z-index pour que le menu s'ouvre devant le reste de la page */
+}
+
+.selecteurs.open {
+  transform: translateX(0);
+}
+
+#open-selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 150px; /* Positionne le bouton juste en dessous du header */
+  left: 20px; /* Positionne le bouton à 20px de la gauche de la fenêtre */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 1001;
+  transition: transform 0.3s ease-in-out; /* Ajoute une transition pour la rotation */
+}
+
+#open-selectors.open {
+  transform: translateX(300px); /* Déplace le bouton à droite de la largeur du menu */
+  transition: transform 0.3s ease-in-out; /* Ajoute une animation à la transformation */
+}
+
+#open-selectors.close {
+  transform: translateX(300px) rotate(180deg); /* Fait pivoter le bouton de 180 degrés */
+}
+
+#galerie {
   padding-top: 10%;
   padding-bottom: 5%;
 }

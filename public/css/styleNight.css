@@ -51,3 +51,16 @@ body::-webkit-scrollbar {
 .header {
     background-color: var(--background-color-night);
 }
+
+#open-selectors {
+    background-color: var(--color-night);
+    border: 1px solid var(--background-color-night);
+}
+
+.fa-arrow-right {
+    color: var(--background-color-night);
+}
+
+.selecteurs {
+    background-color: var(--color-hover-day);
+}
