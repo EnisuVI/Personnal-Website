@@ -113,24 +113,23 @@ body {
     background-color: #ebe5e5
 }
 
-.image-container{
-  position: relative;
+#galerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.photo-container{
-    float: left;
-    position: relative;
-    overflow: hidden;
-}
-.image-thumb{
-    position: relative;
-    background-color: #eee;
+
+.grid-item {
+  flex: 1 0 30%;
+  margin: 1.5%;
 }
 
 .grid-item img {
-    width: auto;
-    height: 1000px;
-    padding: 10px;
-  }
+  width: 100%;
+  height: 100%; 
+  object-fit: contain; 
+  object-position: center; 
+}
 
   .photoProfil {
     width: 1000px;
@@ -149,11 +148,3 @@ body {
     padding-right: 2%;
   }
 
-  .build {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    text-align: center;
-    justify-content: center;
-    padding-right: 2%;
-  }
-  
