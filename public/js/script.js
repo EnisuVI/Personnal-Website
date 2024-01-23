@@ -42,6 +42,7 @@ $(document).ready(function() {
     document.getElementById('type').addEventListener('change', filterImages);
 document.getElementById('filterColor').addEventListener('change', filterImages);
 
+// Filtrer les images
 function filterImages() {
     var type = document.getElementById('type').value;
     var color = document.getElementById('filterColor').value;
@@ -63,6 +64,7 @@ function filterImages() {
     });
   }
 
+  // Ajouter une légende à chaque image
   function setFigcaptionText() {
     var images = document.querySelectorAll('.grid-item img');
     images.forEach(function(img) {
@@ -75,5 +77,35 @@ function filterImages() {
   // Appeler la fonction après que les images ont été ajoutées à la page
   setFigcaptionText();
 
+
+// Afficher les images en plus grand lors d'un clic
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Obtenez toutes les images
+var images = document.querySelectorAll(".grid-item img");
+
+// Ajoutez un écouteur d'événements à chaque image
+images.forEach(function(img) {
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+});
+
+// Lorsque l'utilisateur clique sur <span> (x), fermez la modale
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// Lorsque l'utilisateur clique en dehors de l'image, fermez la modale
+modal.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 
 })

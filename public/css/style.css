@@ -120,21 +120,21 @@ body {
 }
 
 .grid-item {
+  display: flex; /* Ajouté pour utiliser Flexbox */
+  align-items: center; /* Centrer les éléments verticalement */
+  justify-content: center; /* Centrer les éléments horizontalement */
   flex: 1 0 30%;
-  margin: 1.5%; /* Modifié de padding à margin */
+  margin: 1.5%;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
   position: relative;
   overflow: hidden;
-  box-sizing: border-box; /* Ajouté pour inclure le padding et la bordure dans la largeur et la hauteur totales */
+  box-sizing: border-box;
 }
 
 .grid-item img {
-  width: 100%;
-  height: auto; 
-  object-fit: contain; 
-  object-position: center; 
   max-width: 100%;
-  max-height: 750px;
+  max-height: 100%;
+  object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -201,4 +201,42 @@ body {
   text-align: center;
   background-color: var(--color-night);
   color: var(--background-color-night);
+}
+
+.modal {
+  display: none; /* La modale est initialement cachée */
+  position: fixed; /* Position fixe pour la modale */
+  z-index: 1; /* La modale sera au-dessus de tout le reste */
+  padding-top: 100px; /* Position de la modale */
+  left: 0;
+  top: 0;
+  width: 100%; /* Largeur totale */
+  height: 100%; /* Hauteur totale */
+  overflow: auto; /* Ajoutez un scroll si nécessaire */
+  background-color: rgb(0,0,0); /* Couleur de fond */
+  background-color: rgba(0,0,0,0.9); /* Couleur de fond avec opacité */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: var(--color-night);
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--color-hover-night);
+  text-decoration: none;
+  cursor: pointer;
 }
