@@ -11,22 +11,8 @@ body {
     background-color: var(--background-color-night);
 }
 
-.menu li, .btn {
-    display: inline-block;
-    margin: 20px;
-    padding: 20px;
-    padding-top: 25px;
-}
-
 .menu li a{
-    text-decoration: none;
     color: var(--color-night);
-    font-size: 25px;
-}
-
-.menu {
-    text-align: center;
-    justify-content: center;
 }
 
 .logo path {
@@ -35,114 +21,8 @@ body {
 
 .btn {
     color: var(--color-night);
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 200;
 }
-
-.swiper {
-    width: 70%;
-    height: 70%;
-    text-align: center;
-    justify-content: center;
-  }
 
   .swiper-slide {
-    text-align: center;
-    font-size: 18px;
     background: var(--background-color-night);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
-  .swiper-slide img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    justify-content: center;
-  }
-
-  .swiper-wrapper {
-    padding-top: 5%;
-  }
-
-  .contact input, textarea{
-    text-align: left;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 10px;
-    border-radius: 5px;
-    box-shadow: none;
-    outline: none;
-  }
-
-  .contact {
-    text-align: center;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .contact button {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 200;
-    background-color: #fff;
-  }
-
-  .contact button:hover {
-    background-color: #ebe5e5
-  }
-
-  .image-container{
-    position: relative;
-}
-.photo-container{
-    float: left;
-    position: relative;
-    overflow: hidden;
-}
-.image-thumb{
-    position: relative;
-    background-color: #eee;
-}
-
-.grid-item img {
-    width: auto;
-    height: 1000px;
-    padding: 10px;
-  }
-
-  .photoProfil {
-    width: 1000px;
-    height: 1000px;
-    border-radius: 50%;
-    object-fit: cover;
-    padding: 10px;
-    float: left;
-  }
-
-  .biographie {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    text-align: center;
-    justify-content: center;
-    padding-right: 2%;
-  }
-
-  .build {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    text-align: center;
-    justify-content: center;
-    padding-right: 2%;
-  }
-
-  
