@@ -1,10 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
     color: var(--color-day);
-    font-family: indivisible, sans-serif;
-    font-style: normal;
-    font-weight: 200;
 }
 
 body {
@@ -15,7 +10,6 @@ body {
     color: var(--color-day);
 }
 
-
 .logo path {
     fill: var(--color-day) !important;
 }
@@ -24,8 +18,10 @@ body {
     color: var(--color-day);
 }
 
-
-  .swiper-slide {
+.swiper-slide {
     background: var(--background-color-day);
-  }
+}
 
+.btnNight {
+    display: none;
+}
