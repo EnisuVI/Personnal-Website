@@ -39,5 +39,41 @@ $(document).ready(function() {
 
     });
     
+    document.getElementById('type').addEventListener('change', filterImages);
+document.getElementById('filterColor').addEventListener('change', filterImages);
+
+function filterImages() {
+    var type = document.getElementById('type').value;
+    var color = document.getElementById('filterColor').value;
+    
+    var items = document.querySelectorAll('.grid-item');
+    
+    items.forEach(function(item) {
+      var img = item.querySelector('img');
+      var itemType = img.getAttribute('data-type');
+      var itemColor = img.getAttribute('data-color');
+      
+      if ((type === '' || itemType === type) && (color === '' || itemColor === color)) {
+        item.classList.remove('hidden');
+        item.classList.add('visible');
+      } else {
+        item.classList.remove('visible');
+        item.classList.add('hidden');
+      }
+    });
+  }
+
+  function setFigcaptionText() {
+    var images = document.querySelectorAll('.grid-item img');
+    images.forEach(function(img) {
+      var src = img.getAttribute('src');
+      var name = src.substring(src.lastIndexOf('/') + 1, src.lastIndexOf('.'));
+      img.nextElementSibling.textContent = name;
+    });
+  }
+  
+  // Appeler la fonction après que les images ont été ajoutées à la page
+  setFigcaptionText();
+
 
 })
