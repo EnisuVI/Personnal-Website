@@ -186,7 +186,7 @@ body {
   }
 
   .biographie {
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 5%;
     text-align: center;
     justify-content: center;
@@ -239,4 +239,21 @@ body {
   color: var(--color-hover-night);
   text-decoration: none;
   cursor: pointer;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+
+.selecteurs {
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.accueil {
+  padding-top: 10%;
+  padding-bottom: 5%;
 }

@@ -103,9 +103,9 @@ span.onclick = function() {
 
 // Lorsque l'utilisateur clique en dehors de l'image, fermez la modale
 modal.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
+}
 
 })
