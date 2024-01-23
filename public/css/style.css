@@ -5,6 +5,9 @@
 
     --color-night: #f1f1f1;
     --color-day: #1e1e2a;
+
+    --color-hover-night: #ebe5e5a5;
+    --color-hover-day: #1e1e2a7f;
 }
 
 * {
@@ -13,6 +16,10 @@
     font-family: indivisible, sans-serif;
     font-style: normal;
     font-weight: 200;
+}
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .menu li, .btn{
@@ -28,8 +35,16 @@
 }
 
 .menu {
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid;
+}
+
+.logo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
 }
 
 .btn {
@@ -48,7 +63,7 @@
     justify-content: center;
   }
 
-  .swiper-slide {
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     display: flex;
@@ -56,18 +71,18 @@
     align-items: center;
   }
 
-  .swiper-slide img {
+.swiper-slide img {
     width: 50%;
     height: 50%;
     object-fit: cover;
     justify-content: center;
   }
 
-  .swiper-wrapper {
+.swiper-wrapper {
     padding-top: 5%;
   }
 
-  .contact input, textarea{
+.contact input, textarea{
     text-align: left;
     padding: 10px;
     margin-bottom: 10px;
@@ -77,14 +92,14 @@
     outline: none;
   }
 
-  .contact {
+.contact {
     text-align: center;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  .contact button {
+.contact button {
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -92,14 +107,14 @@
     font-size: 15px;
     font-weight: 200;
     background-color: #fff;
-  }
+}
 
-  .contact button:hover {
+.contact button:hover {
     background-color: #ebe5e5
-  }
+}
 
-  .image-container{
-    position: relative;
+.image-container{
+  position: relative;
 }
 .photo-container{
     float: left;

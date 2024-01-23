@@ -6,8 +6,16 @@ body {
     background-color: var(--background-color-day);
 }
 
+.menu {
+    border-bottom: var(--color-day);
+}
+
 .menu li a{
     color: var(--color-day);
+}
+
+.menu li a:hover{
+    color: var(--color-hover-day);
 }
 
 .logo path {

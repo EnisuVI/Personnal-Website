@@ -6,8 +6,16 @@ body {
     background-color: var(--background-color-night);
 }
 
+.menu {
+    border-bottom: var(--color-night);
+}
+
 .menu li a{
     color: var(--color-night);
+}
+
+.menu li a:hover {
+    color: var(--color-hover-night);
 }
 
 .logo path {
