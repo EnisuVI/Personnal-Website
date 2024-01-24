@@ -39,11 +39,11 @@ body::-webkit-scrollbar {
   }
   
   body::-webkit-scrollbar-track {
-    background-color: var(--color-day);
+    background-color: var(--background-color-day);
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: var(--background-color-day);
+    background-color: var(--color-day);
     border-radius: 20px;
     border: 3px solid var(--color-day);
   }
