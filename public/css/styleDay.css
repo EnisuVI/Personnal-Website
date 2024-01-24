@@ -26,6 +26,10 @@ body {
     color: var(--color-day);
 }
 
+.btn:hover {
+    color: var(--color-hover-night);
+}
+
 .swiper-slide {
     background: var(--background-color-day);
 }
@@ -82,3 +86,13 @@ body::-webkit-scrollbar {
 .swiper-button-prev {
     color: var(--color-day) !important;
 }
+
+.selectGalerie, #reset-button {
+    background-color: var(--color-night);
+    color: var(--background-color-night);
+  }
+
+  #reset-button:hover {
+    background-color: var(--color-hover-night); 
+    color: var(--color-day); 
+  }

@@ -107,12 +107,23 @@ modal.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-var button = document.getElementById('open-selectors');
+
+// Ouvrir et fermer le menu
+var openButton = document.getElementById('open-selectors');
 var menu = document.querySelector('.selecteurs');
 
-button.addEventListener('click', function() {
-  menu.classList.toggle('open');
-  button.classList.toggle('close'); /* Ajoute ou supprime la classe close */
+openButton.addEventListener('click', function() {
+  if (menu.classList.contains('open')) {
+    // Si le menu est ouvert, fermez-le et réinitialisez la position du bouton
+    menu.classList.remove('open');
+    openButton.classList.remove('open');
+    openButton.classList.add('close');
+  } else {
+    // Si le menu est fermé, ouvrez-le et déplacez le bouton
+    menu.classList.add('open');
+    openButton.classList.add('open');
+    openButton.classList.remove('close');
+  }
 });
 
 document.getElementById('pageTop').addEventListener('click', function() {
@@ -133,9 +144,11 @@ var button = document.getElementById('pageTop');
 
 var handleScroll = function() {
   if (window.pageYOffset > 0) {
-    button.style.display = 'block'; // Montre le bouton lorsque vous n'êtes pas en haut de la page
+    button.style.opacity = "1";
+    button.style.visibility = "visible";
   } else {
-    button.style.display = 'none'; // Cache le bouton lorsque vous êtes en haut de la page
+    button.style.opacity = "0";
+    button.style.visibility = "hidden";
   }
 };
 
@@ -143,4 +156,42 @@ window.addEventListener('scroll', handleScroll);
 
 // Appelle la fonction de gestion de l'événement de défilement au chargement de la page
 handleScroll();
+
+var slider = document.getElementById('image-width-slider');
+var galerie = document.getElementById('galerie');
+var sliderValue = document.getElementById('slider-value');
+
+// Initialise la propriété grid-template-columns de #galerie et l'élément #slider-value avec la valeur par défaut du slider
+var defaultNumberOfColumns = slider.value;
+galerie.style.gridTemplateColumns = 'repeat(' + defaultNumberOfColumns + ', 1fr)';
+sliderValue.textContent = defaultNumberOfColumns;
+
+slider.addEventListener('change', function() {
+  var numberOfColumns = this.value; // Obtient le nombre de colonnes à partir de la valeur du slider
+
+  // Ajuste la propriété grid-template-columns de #galerie
+  galerie.style.gridTemplateColumns = 'repeat(' + numberOfColumns + ', 1fr)';
+
+  // Met à jour l'élément #slider-value
+  sliderValue.textContent = numberOfColumns;
+});
+
+var resetButton = document.getElementById('reset-button');
+var selectType = document.getElementById('type');
+var selectColor = document.getElementById('filterColor');
+
+resetButton.addEventListener('click', function() {
+  // Réinitialise la valeur du slider
+  slider.value = "3";
+  slider.dispatchEvent(new Event('change'));
+
+  // Réinitialise les valeurs des sélecteurs
+  selectType.value = "";
+  selectColor.value = "";
+
+  // Déclenche les événements change pour mettre à jour la galerie
+  selectType.dispatchEvent(new Event('change'));
+  selectColor.dispatchEvent(new Event('change'));
+});
+
 })
