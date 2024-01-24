@@ -64,3 +64,11 @@ body::-webkit-scrollbar {
 .selecteurs {
     background-color: var(--color-hover-night);
 }
+
+.swiper-button-next {
+    color: var(--color-day) !important;
+}
+
+.swiper-button-prev {
+    color: var(--color-day) !important;
+}
