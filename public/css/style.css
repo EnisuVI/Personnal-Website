@@ -8,6 +8,9 @@
 
     --color-hover-night: #ebe5e5a5;
     --color-hover-day: #1e1e2a7f;
+
+    --color-hover-pageTop-night: #f1f1f1e5;
+    --color-hover-pageTop-day: #1e1e2ae2;
 }
 
 * {
@@ -300,4 +303,30 @@ body {
 .accueil {
   padding-top: 10%;
   padding-bottom: 5%;
+}
+
+#pageTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 1001;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.fa-solid.fa-arrow-up {
+  display: block;
+}
+
+#open-selectors, #pageTop {
+  cursor: pointer;
 }

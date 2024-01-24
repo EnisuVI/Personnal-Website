@@ -57,7 +57,17 @@ body::-webkit-scrollbar {
     border: 1px solid var(--background-color-night);
 }
 
-.fa-arrow-right {
+#pageTop {
+    background-color: var(--color-night);
+    border: 1px solid var(--background-color-night);
+}
+
+#pageTop:hover, #open-selectors:hover {
+    background-color: var( --color-hover-pageTop-night);
+    border: 1px solid var(--background-color-night);
+}
+
+.fa-arrow-right, .fa-arrow-up {
     color: var(--background-color-night);
 }
 

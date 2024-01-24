@@ -95,13 +95,13 @@ images.forEach(function(img) {
   }
 });
 
-// Lorsque l'utilisateur clique sur <span> (x), fermez la modale
+// Lorsque l'utilisateur clique sur <span> (x), fermer la modale
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
 
-// Lorsque l'utilisateur clique en dehors de l'image, fermez la modale
+// Lorsque l'utilisateur clique en dehors de l'image, fermer la modale
 modal.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -114,5 +114,33 @@ button.addEventListener('click', function() {
   menu.classList.toggle('open');
   button.classList.toggle('close'); /* Ajoute ou supprime la classe close */
 });
+
+document.getElementById('pageTop').addEventListener('click', function() {
+  var top = window.pageYOffset || document.documentElement.scrollTop;
+  var step = top / 50; // Ajustez ce nombre pour changer la vitesse de l'animation
+
+  var intervalId = setInterval(function() {
+    top -= step;
+    if (top <= 0) {
+      clearInterval(intervalId);
+      top = 0;
+    }
+    window.scrollTo(0, top);
+  }, 15); // Vitesse de l'animation
+});
   
+var button = document.getElementById('pageTop');
+
+var handleScroll = function() {
+  if (window.pageYOffset > 0) {
+    button.style.display = 'block'; // Montre le bouton lorsque vous n'êtes pas en haut de la page
+  } else {
+    button.style.display = 'none'; // Cache le bouton lorsque vous êtes en haut de la page
+  }
+};
+
+window.addEventListener('scroll', handleScroll);
+
+// Appelle la fonction de gestion de l'événement de défilement au chargement de la page
+handleScroll();
 })
