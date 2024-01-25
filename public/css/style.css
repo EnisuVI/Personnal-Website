@@ -19,6 +19,10 @@
     font-family: indivisible, sans-serif;
     font-style: normal;
     font-weight: 200;
+    /*font-family: 'Chronicle SSm A', 'Chronicle SSm B';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;*/
 }
 
 body {
@@ -172,6 +176,7 @@ body {
   transition: all 0.5s ease-in-out;
   transform: translateY(100%);
   opacity: 0;
+  font-size: 30px;
 }
 
 .grid-item:hover figcaption {
@@ -348,4 +353,123 @@ body {
 
 #open-selectors, #pageTop {
   cursor: pointer;
+}
+
+
+/* Pour les écrans de tablettes */
+@media (max-width: 768px) {
+  .menu li, .btn {
+      margin: 10px;
+      padding: 10px;
+      padding-top: 15px;
+  }
+
+  .menu li a {
+      font-size: 20px;
+  }
+
+  .btn {
+      padding: 5px;
+      font-size: 12px;
+  }
+
+  .swiper {
+      width: 100%;
+      height: 100%;
+  }
+
+  .swiper-slide img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .contact input, textarea {
+      font-size: 8px;
+  }
+
+  .contact button {
+      font-size: 12px;
+  }
+
+  .selectGalerie, #reset-button, #image-width-slider {
+      font-size: 12px;  
+  }
+
+  .biographie {
+      padding-top: 5%;
+      padding-bottom: 2.5%;
+      padding-right: 1%;
+  }
+
+  .photoProfil {
+      width: 500px;
+      height: 500px;
+  }
+
+  #galerie {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-item figcaption {
+      font-size: 20px;
+  }
+}
+
+/* Pour les écrans de mobiles */
+@media (max-width: 480px) {
+  .menu li, .btn {
+      margin: 5px;
+      padding: 5px;
+      padding-top: 10px;
+  }
+
+  .menu li a {
+      font-size: 15px;
+  }
+
+  .btn {
+      padding: 3px;
+      font-size: 10px;
+  }
+
+  .swiper {
+      width: 100%;
+      height: 100%;
+  }
+
+  .swiper-slide img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .contact input, textarea {
+      font-size: 6px;
+  }
+
+  .contact button {
+      font-size: 10px;
+  }
+
+  .selectGalerie, #reset-button, #image-width-slider {
+      font-size: 10px;  
+  }
+
+  .biographie {
+      padding-top: 2.5%;
+      padding-bottom: 1.25%;
+      padding-right: 0.5%;
+  }
+
+  .photoProfil {
+      width: 250px;
+      height: 250px;
+  }
+
+  #galerie {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-item figcaption {
+      font-size: 15px;
+  }
 }
