@@ -83,6 +83,7 @@ body {
     height: 50%;
     object-fit: cover;
     justify-content: center;
+    align-items: center;
   }
 
 .swiper-wrapper {
