@@ -473,3 +473,78 @@ body {
       font-size: 15px;
   }
 }
+
+/* Pour les écrans de tablettes */
+@media (max-width: 768px) {
+  .selecteurs {
+      flex-direction: column; /* Affiche le menu verticalement */
+      font-size: 0.8em; /* Réduit la taille de la police */
+      height: auto; /* Augmente la hauteur du menu */
+      overflow-y: auto; /* Fait défiler le menu si son contenu dépasse sa hauteur */
+  }
+
+  .logo {
+    width: 5%; /* Réduit encore plus la taille du logo */
+    position: absolute; /* Positionne le logo par rapport au header */
+    top: 20px; /* Ajoute une marge en haut du logo */
+    left: 20px; /* Ajoute une marge à gauche du logo */
+}
+
+  .header {
+      position: fixed; /* Permet de positionner le logo par rapport au header */
+  }
+
+  .menu .gallery-item {
+    font-size: 0.8em; /* Réduit la taille de la police */
+    margin: 5px; /* Ajuste la marge */
+    padding: 5px; /* Ajuste le padding */
+}
+}
+
+/* Pour les écrans de mobiles */
+@media (max-width: 480px) {
+  .selecteurs {
+      flex-direction: column; /* Affiche le menu verticalement */
+      font-size: 0.6em; /* Réduit encore plus la taille de la police */
+      overflow-y: auto; /* Fait défiler le menu si son contenu dépasse sa hauteur */
+      z-index: 1000;
+      height: 100vh;
+      width: 40%;
+  }
+
+  .logo {
+      width: 20%; /* Réduit encore plus la taille du logo */
+      top: -8.5px;
+      left: 7px; /* Ajoute une marge à gauche du logo */
+  }
+
+  @media (max-width: 480px) {
+    .menu .gallery-item {
+        font-size: 0.6em; /* Réduit encore plus la taille de la police */
+        margin: 3px; /* Ajuste la marge */
+        padding: 3px; /* Ajuste le padding */
+    }
+
+}
+
+/* Pour les écrans de tablettes */
+@media (max-width: 768px) {
+  .header {
+      position: fixed; /* Fixe le header en haut de la page */
+      top: 0; /* Positionne le header en haut de la page */
+      left: 0; /* Positionne le header à gauche de la page */
+      width: 100%; /* Assure que le header s'étend sur toute la largeur de la page */
+      z-index: 1004; /* Assure que le header est toujours au-dessus des autres éléments */
+  }
+}
+
+/* Pour les écrans de mobiles */
+@media (max-width: 480px) {
+  .header {
+      position: fixed; /* Fixe le header en haut de la page */
+      top: 0; /* Positionne le header en haut de la page */
+      left: 0; /* Positionne le header à gauche de la page */
+      width: 100%; /* Assure que le header s'étend sur toute la largeur de la page */
+      z-index: 1004; /* Assure que le header est toujours au-dessus des autres éléments */
+  }
+}
