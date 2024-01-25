@@ -201,6 +201,14 @@ body {
     padding-right: 2%;
   }
 
+  .presentation {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+    padding-right: 2%;
+  }
+
 .selectGalerie, #reset-button, #image-width-slider {
   display: inline;
   margin: 10px;
@@ -483,16 +491,16 @@ body {
       overflow-y: auto; /* Fait défiler le menu si son contenu dépasse sa hauteur */
   }
 
-  .logo {
-    width: 5%; /* Réduit encore plus la taille du logo */
-    position: absolute; /* Positionne le logo par rapport au header */
-    top: 20px; /* Ajoute une marge en haut du logo */
-    left: 20px; /* Ajoute une marge à gauche du logo */
+  .header {
+    position: fixed; /* Garde le header fixe */
 }
 
-  .header {
-      position: fixed; /* Permet de positionner le logo par rapport au header */
-  }
+.logo {
+    position: absolute; /* Positionne le logo par rapport au header */
+    top: 10px; /* Ajoute une marge en haut du logo */
+    left: 10px; /* Ajoute une marge à gauche du logo */
+    width: 50%; /* Réduit la taille du logo */
+}
 
   .menu .gallery-item {
     font-size: 0.8em; /* Réduit la taille de la police */
@@ -547,4 +555,25 @@ body {
       width: 100%; /* Assure que le header s'étend sur toute la largeur de la page */
       z-index: 1004; /* Assure que le header est toujours au-dessus des autres éléments */
   }
+
+  #open-selectors {
+    position: fixed; /* Fixe la flèche par rapport à la fenêtre de visualisation */
+    top: 50px; /* Augmente la marge en haut de la flèche */
+    right: 40%; /* Positionne la flèche à droite de la page */
+    z-index: 1003; /* Assure que la flèche est toujours derrière le header */
+  }
+  
+  #open-selectors.open {
+    transform: translateX(175px) rotate(180deg); /* Déplace le bouton à droite de la largeur du menu */
+    transition: transform 0.3s ease-in-out; /* Ajoute une animation à la transformation */
+  }
+  
+  #open-selectors.close {
+    transform: translateX(0) rotate(0); /* Fait pivoter le bouton de 180 degrés */
+  }
+
+  .biographie, .galerie, .presentation {
+    margin-top: 60px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
+  }
+}
 }
